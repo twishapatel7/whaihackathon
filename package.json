@@ -16,6 +16,7 @@
   "private": true,
   "workspaces": [
     "backend",
-    "mobile"
+    "mobile",
+    "frontend"
   ]
 }
