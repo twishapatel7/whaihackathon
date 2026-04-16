@@ -1,0 +1,21 @@
+{
+  "name": "hotel-voice-review-mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:backend": "npm run dev -w backend",
+    "dev:mobile": "npm run start -w mobile",
+    "build:backend": "npm run build -w backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "mobile"
+  ]
+}

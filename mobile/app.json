@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Hotel Voice Review",
+    "slug": "hotel-voice-review",
+    "scheme": "hotelvoice",
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

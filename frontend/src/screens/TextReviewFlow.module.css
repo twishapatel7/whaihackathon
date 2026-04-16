@@ -1,0 +1,250 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: transparent;
+  min-height: 100%;
+}
+
+.statusBar { height: 44px; }
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: var(--s2) var(--s5) var(--s3);
+  border-bottom: 1px solid var(--border);
+}
+
+.backBtn {
+  background: none;
+  border: 1px solid var(--border);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.backBtn:active { border-color: var(--text-3); }
+
+.headerTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+.headerRight { width: 32px; }
+
+/* Rewards — inline note, not a banner */
+.rewardsBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s3) var(--s6);
+  border-bottom: 1px solid var(--border);
+}
+
+.rewardsMedal { display: flex; align-items: center; color: var(--gold); }
+
+.rewardsText {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+
+.rewardsText strong { font-weight: 600; color: var(--gold); }
+
+/* Body */
+.scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--s6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+
+/* Hotel — inline, no box */
+.hotelChip {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.hotelChipIcon {
+  display: flex;
+  align-items: center;
+  color: var(--text-3);
+}
+
+.hotelChipInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hotelName {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+.hotelLocation {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+/* Input */
+.inputSection { display: flex; flex-direction: column; }
+
+.inputLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  margin-bottom: var(--s3);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: var(--s2) 0 var(--s3);
+  font-size: 14px;
+  color: var(--text-1);
+  resize: none;
+  line-height: 1.65;
+  background: transparent;
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.textarea:focus { border-color: var(--accent); }
+.textarea::placeholder { color: var(--text-3); }
+
+.charCount {
+  text-align: right;
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: var(--s2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scout follow-up — bordered block, not a floating card */
+.scoutTeaser {
+  padding: var(--s4) 0 0;
+  border-top: 1px solid var(--border);
+  margin-top: var(--s2);
+}
+
+.scoutTeaserTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--s3);
+}
+
+.scoutBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.scoutDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.scoutPtsChip {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.scoutTeaserTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: var(--s2);
+  letter-spacing: -0.1px;
+}
+
+.scoutTeaserDesc {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin-bottom: var(--s4);
+}
+
+.scoutTopicPills {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+
+.topicPill {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.topicPill + .topicPill::before {
+  content: ' · ';
+  color: var(--border-2);
+}
+
+/* Footer */
+.footer {
+  padding: var(--s3) var(--s6) var(--s8);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px var(--s6);
+  border-radius: var(--r-md);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.submitBtn:disabled {
+  background: var(--surface-2);
+  color: var(--text-3);
+  cursor: not-allowed;
+}
+
+.submitBtn:not(:disabled):active { opacity: 0.85; transform: scale(0.99); }
+
+.footerNote {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-3);
+}

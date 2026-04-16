@@ -1,0 +1,30 @@
+{
+  "name": "hotel-voice-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint \"app/**/*.{ts,tsx}\" \"lib/**/*.ts\" \"middleware.ts\""
+  },
+  "dependencies": {
+    "@next/swc-darwin-arm64": "^14.2.33",
+    "@supabase/supabase-js": "latest",
+    "@vapi-ai/server-sdk": "latest",
+    "next": "14",
+    "openai": "^6.34.0",
+    "react": "18",
+    "react-dom": "18",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^8.57.1",
+    "typescript": "latest"
+  }
+}

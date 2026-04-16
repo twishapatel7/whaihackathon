@@ -1,0 +1,279 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #F4F6F9;
+  min-height: 100%;
+}
+
+.statusBar { height: 44px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 12px;
+  background: #fff;
+  border-bottom: 1px solid #E8EBF0;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.backBtn:hover { background: #F0F4FA; }
+
+.headerTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0A0E1A;
+  letter-spacing: -0.2px;
+}
+
+.headerRight { width: 30px; }
+
+.scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 14px 0;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.statValue {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0A0E1A;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 10px;
+  font-weight: 500;
+  color: #8896B0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.section { margin-bottom: 20px; }
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8896B0;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0 0 10px 2px;
+}
+
+.emptyNote {
+  font-size: 14px;
+  color: #A0AABF;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.coverageList {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coverageRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coverageName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3A4460;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.coverageBarTrack {
+  flex: 1;
+  height: 8px;
+  background: #EDF1F7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.coverageBarFill {
+  height: 100%;
+  background: #0071C2;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.coverageCount {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0071C2;
+  width: 20px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.subList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.subCardTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.typeBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+}
+
+.badgeBlue { background: #E6F1FB; color: #0071C2; }
+.badgeGreen { background: #E6F5EC; color: #2E8B57; }
+
+.subTimestamp {
+  font-size: 12px;
+  color: #A0AABF;
+  flex: 1;
+}
+
+.subPoints {
+  font-size: 12px;
+  font-weight: 700;
+  color: #B8860B;
+}
+
+.subBody { padding-top: 2px; }
+
+.reviewText {
+  font-size: 14px;
+  color: #3A4460;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.reviewTextExpanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.showMoreBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #0071C2;
+  font-weight: 600;
+  padding: 4px 0 0;
+  display: block;
+}
+
+.gapMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.gapCategory {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0071C2;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.customBadge {
+  font-size: 10px;
+  color: #8896B0;
+  background: #F0F2F7;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.gapQuestion {
+  font-size: 13px;
+  color: #8896B0;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.gapAnswer {
+  font-size: 14px;
+  color: #1A2340;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.clearWrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #C0392B;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.clearBtn:hover { text-decoration: underline; }
+
+.bottomPad { height: 32px; }

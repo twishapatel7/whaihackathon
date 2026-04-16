@@ -1,0 +1,348 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: transparent;
+  min-height: 100%;
+}
+
+.statusBar { height: 44px; background: transparent; }
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.backBtn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.backBtn:active { background: var(--border); }
+
+.headerCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.headerCategory {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progressLabel {
+  font-size: 11px;
+  color: var(--text-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.headerRight { width: 38px; }
+
+/* Scrollable body */
+.content {
+  flex: 1;
+  padding: 20px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* "You said" chip */
+.previousChip {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.previousLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.previousText {
+  font-size: 13px;
+  color: var(--text-2);
+  font-style: italic;
+}
+
+/* Scout bubble */
+.bubbleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bubbleLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.bubble {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 4px 16px 16px 16px;
+  padding: 16px 18px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.bubbleQuestion {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-1);
+  line-height: 1.5;
+}
+
+/* Loading state */
+.thinkingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thinkingText {
+  font-size: 13px;
+  color: var(--violet);
+  font-style: italic;
+}
+
+.loadingDots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.loadingDots span {
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: dotPulse 1.2s ease-in-out infinite;
+}
+
+.loadingDots span:nth-child(2) { animation-delay: 0.2s; }
+.loadingDots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40%           { opacity: 1;   transform: scale(1);   }
+}
+
+/* Answer chips */
+.chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chip {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+
+.chip:active { transform: scale(0.98); }
+
+.chipSelected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--text-1);
+}
+
+/* "or" divider */
+.orDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.orLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.orText {
+  font-size: 12px;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+/* Describe in own words */
+.ownWordsBtn {
+  background: var(--surface-2);
+  border: 1.5px dashed var(--border-2);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  width: 100%;
+}
+
+.ownWordsBtn:active { background: var(--border); }
+
+.ownWordsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--text-1);
+  resize: none;
+  line-height: 1.6;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.textarea::placeholder { color: var(--text-3); }
+
+.ownWordsBack {
+  background: none;
+  border: none;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.ownWordsBack:active { color: var(--text-1); }
+
+/* Footer */
+.footer {
+  padding: 12px 20px 32px;
+  border-top: 1px solid var(--border);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: var(--r-md);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.submitBtn:disabled {
+  background: var(--surface-2);
+  box-shadow: none;
+  cursor: not-allowed;
+  color: var(--text-3);
+}
+
+.submitBtn:not(:disabled):active {
+  opacity: 0.92;
+  transform: scale(0.98);
+}
+
+.skipBtn {
+  background: none;
+  border: none;
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.15s;
+}
+
+.skipBtn:active { color: var(--text-1); }
+
+.scoutDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}

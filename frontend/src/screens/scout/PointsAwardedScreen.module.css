@@ -1,0 +1,202 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: transparent;
+  min-height: 100%;
+}
+
+.statusBar { height: 44px; background: transparent; }
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 24px 40px;
+  text-align: center;
+}
+
+/* Check icon */
+.iconWrap {
+  margin-bottom: 20px;
+  animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounceIn {
+  from { transform: scale(0.3); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.iconCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titles */
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: -0.4px;
+  margin-bottom: 6px;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text-2);
+  margin-bottom: 28px;
+}
+
+/* Points card */
+.ptsCard {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  animation: slideUp 0.4s 0.15s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ptsCardRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.ptsCardMedal { font-size: 36px; flex-shrink: 0; }
+
+.ptsCardLabel {
+  font-size: 11px;
+  color: #C49A3C;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.ptsCardValue {
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFD000;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.ptsCardNote {
+  font-size: 12px;
+  color: #C49A3C;
+  text-align: left;
+}
+
+/* Scout card */
+.scoutCard {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 16px 0 0;
+  margin-bottom: 0;
+  text-align: left;
+  animation: slideUp 0.4s 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.scoutCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.scoutLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.scoutDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--violet);
+  flex-shrink: 0;
+}
+
+.scoutPtsPill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #FFD000;
+  background: rgba(245, 166, 35, 0.12);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.scoutCardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 8px;
+  letter-spacing: -0.1px;
+}
+
+.scoutCardDesc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.scoutBtn {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: var(--r-md);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.scoutBtn:active {
+  opacity: 0.92;
+  transform: scale(0.98);
+}
+
+/* Skip */
+.skipBtn {
+  background: none;
+  border: none;
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.skipBtn:active { color: var(--text-1); }

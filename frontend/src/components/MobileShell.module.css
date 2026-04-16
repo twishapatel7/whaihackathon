@@ -1,0 +1,107 @@
+.shell {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.device {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100dvh;
+  background: var(--surface);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bottomNav {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 10px 0 env(safe-area-inset-bottom, 10px);
+  flex-shrink: 0;
+}
+
+.navTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: var(--text-2);
+}
+
+.navTabActive {
+  color: var(--nav-active);
+}
+
+.navTab:active {
+  opacity: 0.88;
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.navIcon :global(svg) {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.navLabel {
+  font-size: 10px;
+  font-weight: 500;
+  color: inherit;
+  letter-spacing: 0.02em;
+}
+
+.navTabActive .navLabel {
+  font-weight: 600;
+}
+
+@media (min-width: 431px) {
+  .shell {
+    align-items: flex-start;
+    padding: 40px 0 80px;
+  }
+
+  .device {
+    min-height: auto;
+    height: 812px;
+    border-radius: 4px;
+    border: 1px solid var(--border-2);
+    overflow: hidden;
+  }
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+  }
+}

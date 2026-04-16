@@ -1,0 +1,257 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: transparent;
+  min-height: 100%;
+}
+
+.statusBar { height: 44px; }
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: var(--s2) var(--s5) var(--s3);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+}
+
+.backBtn {
+  background: none;
+  border: 1px solid var(--border);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s;
+}
+.backBtn:active { border-color: var(--text-3); }
+
+.headerTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+.headerRight { width: 32px; }
+
+.scrollable { flex: 1; overflow-y: auto; }
+
+/* Hotel row — just text */
+.hotelChip {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s5) var(--s6) var(--s5);
+  border-bottom: 1px solid var(--border);
+}
+
+.hotelChipIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-3);
+}
+
+.hotelChipInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  min-width: 0;
+}
+
+.hotelChipName {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.3;
+}
+
+/* Sections */
+.section { padding: var(--s6) var(--s6) 0; }
+
+.sectionLabel {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: var(--s6);
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+}
+
+.starsRow {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 var(--s5);
+}
+
+.ratingLabel {
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ratingText {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-2);
+  letter-spacing: 0.2px;
+}
+
+/* Textarea — bottom line only */
+.inputLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  margin-bottom: var(--s3);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.optional { font-weight: 400; color: var(--text-3); }
+
+.textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: var(--s2) 0 var(--s3);
+  font-size: 14px;
+  color: var(--text-1);
+  resize: none;
+  line-height: 1.65;
+  background: transparent;
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+}
+.textarea::placeholder { color: var(--text-3); }
+
+.charCount {
+  text-align: right;
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: var(--s2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s8) var(--s6);
+}
+
+.dividerLine { flex: 1; height: 1px; background: var(--border); }
+
+.dividerText {
+  font-size: 10px;
+  color: var(--text-3);
+  text-align: center;
+  max-width: 140px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mode choice — full-width rows, not cards */
+.modeList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+  margin-bottom: var(--s5);
+}
+
+.modeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  width: 100%;
+  padding: 14px var(--s2);
+  text-align: left;
+  background: var(--surface);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.modeRow:active {
+  background: var(--surface-2);
+}
+
+.modeRowMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.modeRowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  margin-bottom: 2px;
+}
+
+.modeRowIcon {
+  display: flex;
+  align-items: center;
+  color: var(--text-3);
+}
+
+.modeRowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.modeRowDesc {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+
+.ptsChip {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.modeRowChevron {
+  flex-shrink: 0;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+}
+
+.footnote {
+  font-size: 11px;
+  color: var(--text-3);
+  text-align: center;
+  line-height: 1.6;
+  padding-bottom: var(--s2);
+}
+
+.footnote strong { color: var(--text-2); font-weight: 500; }
+
+.bottomPad { height: var(--s8); }
